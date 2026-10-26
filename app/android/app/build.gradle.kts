@@ -30,6 +30,23 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        konateGym {
+            storeFile file("./konate_gym.keystore")
+            storePassword = "Konate2026"
+            keyAlias = "konate_gym"
+            keyPassword = "Konate2026"
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            signingConfig = signingConfigs.getByName("konateGym")
+            // Signing with the debug keys for now, so `flutter run --release` works.
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

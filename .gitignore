@@ -1,37 +1,44 @@
-__pycache__/
-*.py[cod]
-.venv/
-venv/
+# Dépendances et builds
+node_modules/
+build/
+dist/
+.dart_tool/
+.pub-cache/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+*.jks
+*.keystore
+
+# iOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+
+# Secrets et environnement
 .env
+.env.*
+!.env.example
+
+# Python / Django (backend)
+__pycache__/
+*.pyc
+venv/
+.venv/
 db.sqlite3
-media/
-staticfiles/
-.pytest_cache/
-.coverage
-htmlcov/
-*.log
-pip-install.log
-.pgdata/
-pg.log
-initdb.log
-pip-install-2.log
+
+# IDE et système
+.idea/
+.vscode/
+*.iml
 .DS_Store
 Thumbs.db
-
-# Flutter / Dart
-app/.dart_tool/
-app/build/
-app/.flutter-plugins
-app/.flutter-plugins-dependencies
-app/android/.gradle/
-app/android/local.properties
-app/android/key.properties
-app/ios/Pods/
-app/ios/.symlinks/
-app/ios/Flutter/ephemeral/
-app/.run/
-# Logs de build locaux
-build-apk.log
-server.log
-*.iml
-.idea/

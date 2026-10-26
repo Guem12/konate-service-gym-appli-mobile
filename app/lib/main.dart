@@ -37,6 +37,36 @@ class _KsgAppState extends State<KsgApp> {
   void initState() {
     super.initState();
     _auth.bootstrap();
+    _setupPushNotifications();
+  }
+
+  Future<void> _setupPushNotifications() async {
+    // Request permission for iOS
+    if (kIsWeb || defaultTargetPlatform == TargetPlatform.android) {
+      await _messaging.requestPermission();
+    }
+
+    // Get the initial message (notification opened from quit/background state)
+    final initialMessage = await _messaging.getInitialMessage();
+    if (initialMessage != null) {
+      // Handle the notification data
+      final notification = initialMessage.data;
+      debugPrint('>>> Initial notification: $notification');
+    }
+
+    // Listen for incoming messages while app is in foreground
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      debug.print('>>> Foreground message: ${message.notification?.title}');
+    });
+
+    // Listen for messages when app is in background
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      debug.print('>>> Background message opened app: ${message.notification?.title}');
+    });
+
+    // Get the token for sending notifications
+    final token = await _messaging.getToken();
+    debugPrint('>>> FCM Token: $token');
   }
 
   @override

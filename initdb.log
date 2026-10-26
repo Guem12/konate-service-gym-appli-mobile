@@ -1,0 +1,23 @@
+Les fichiers de ce système de bases de données appartiendront à l'utilisateur « Guem ».
+Le processus serveur doit également lui appartenir.
+
+L'instance sera initialisée avec la locale « French_France.1252 ».
+La configuration de la recherche plein texte a été initialisée à « french ».
+
+Les sommes de contrôle des pages de données sont activées.
+
+création du répertoire .pgdata... ok
+création des sous-répertoires... ok
+sélection de l'implémentation de la mémoire partagée dynamique...windows
+sélection de la valeur par défaut pour « max_connections »... 100
+sélection de la valeur par défaut pour « shared_buffers »... 128MB
+sélection du fuseau horaire par défaut... Atlantic/Reykjavik
+création des fichiers de configuration... ok
+lancement du script bootstrap...ok
+exécution de l'initialisation après bootstrap... ok
+synchronisation des données sur disque... ok
+
+Succès. Vous pouvez maintenant lancer le serveur de bases de données en utilisant :
+
+    ^"C^:^\Program^ Files^\PostgreSQL^\18^\bin^\pg^_ctl^" -D .pgdata -l fichier_de_trace start
+

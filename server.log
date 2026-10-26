@@ -1,0 +1,135 @@
+[20/Oct/2026 10:48:27] "GET /api/v1/health HTTP/1.1" 200 111
+[20/Oct/2026 10:48:27] "GET /api/v1/health HTTP/1.1" 200 111
+[20/Oct/2026 10:48:28] "POST /api/v1/auth/login HTTP/1.1" 200 877
+[20/Oct/2026 10:48:28] "GET /api/v1/auth/me HTTP/1.1" 200 443
+[20/Oct/2026 10:48:29] "GET /api/v1/home HTTP/1.1" 200 1490
+[20/Oct/2026 10:48:29] "GET /api/v1/products?search=halt HTTP/1.1" 200 338
+[20/Oct/2026 10:48:29] "GET /api/v1/products/1 HTTP/1.1" 200 840
+[20/Oct/2026 10:48:29] "GET /api/v1/whatsapp/link?product=1 HTTP/1.1" 200 261
+[20/Oct/2026 10:48:29] "GET /api/v1/settings HTTP/1.1" 200 566
+[20/Oct/2026 10:48:29] "GET /api/v1/me/addresses HTTP/1.1" 200 278
+[20/Oct/2026 10:48:29] "POST /api/v1/cart/items HTTP/1.1" 201 299
+[20/Oct/2026 10:48:30] "POST /api/v1/orders HTTP/1.1" 201 1004
+[20/Oct/2026 10:48:30] "GET /api/v1/orders HTTP/1.1" 200 817
+[20/Oct/2026 10:48:30] "GET /api/v1/orders/13 HTTP/1.1" 200 1053
+[20/Oct/2026 10:48:30] "GET /api/v1/orders/13/invoice?kind=invoice HTTP/1.1" 200 1950
+Unauthorized: /api/v1/auth/login
+WARNING 2026-10-20 10:48:32,048 django.request Unauthorized: /api/v1/auth/login
+[20/Oct/2026 10:48:32] "POST /api/v1/auth/login HTTP/1.1" 401 93
+[20/Oct/2026 10:48:33] "POST /api/v1/auth/login HTTP/1.1" 200 745
+[20/Oct/2026 10:48:33] "GET /api/v1/admin/dashboard HTTP/1.1" 200 643
+[20/Oct/2026 10:48:33] "GET /api/v1/admin/orders HTTP/1.1" 200 986
+[20/Oct/2026 10:48:35] "POST /api/v1/admin/orders/13/status HTTP/1.1" 200 1069
+[20/Oct/2026 10:48:35] "GET /api/v1/admin/deliveries HTTP/1.1" 200 939
+[20/Oct/2026 10:48:35] "GET /api/v1/admin/products HTTP/1.1" 200 2892
+[20/Oct/2026 10:48:36] "POST /api/v1/cart/items HTTP/1.1" 201 353
+[20/Oct/2026 10:48:38] "POST /api/v1/orders HTTP/1.1" 201 1058
+Bad Request: /api/v1/orders/14/invoice
+WARNING 2026-10-20 10:48:38,565 django.request Bad Request: /api/v1/orders/14/invoice
+[20/Oct/2026 10:48:38] "GET /api/v1/orders/14/invoice?kind=receipt HTTP/1.1" 400 65
+[20/Oct/2026 10:48:38] "GET /api/v1/admin/payments/pending HTTP/1.1" 200 412
+[20/Oct/2026 10:48:39] "POST /api/v1/admin/payments/6/confirm HTTP/1.1" 200 359
+[20/Oct/2026 10:48:39] "GET /api/v1/orders/14/invoice?kind=receipt HTTP/1.1" 200 1784
+Forbidden: /api/v1/admin/dashboard
+WARNING 2026-10-20 10:48:39,968 django.request Forbidden: /api/v1/admin/dashboard
+[20/Oct/2026 10:48:39] "GET /api/v1/admin/dashboard HTTP/1.1" 403 73
+Unauthorized: /api/v1/orders
+WARNING 2026-10-20 10:48:39,990 django.request Unauthorized: /api/v1/orders
+[20/Oct/2026 10:48:39] "GET /api/v1/orders HTTP/1.1" 401 58
+[20/Oct/2026 10:55:19] "OPTIONS /api/v1/auth/me HTTP/1.1" 200 0
+[20/Oct/2026 10:55:20] "GET /api/v1/auth/me HTTP/1.1" 200 295
+[20/Oct/2026 10:55:23] "GET /api/v1/cart HTTP/1.1" 200 130
+[20/Oct/2026 10:55:23] "GET /api/v1/home HTTP/1.1" 200 1528
+[20/Oct/2026 10:55:24] "GET /api/v1/cart HTTP/1.1" 200 130
+[20/Oct/2026 10:55:24] "GET /api/v1/products?ordering=-sold_count&page=1 HTTP/1.1" 200 1066
+[20/Oct/2026 10:55:24] "GET /api/v1/orders HTTP/1.1" 200 52
+Internal Server Error: /api/v1/categories
+Traceback (most recent call last):
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 727, in to_representation
+    return [
+           ^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 402, in __iter__
+    self._fetch_all()
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 1933, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 133, in __iter__
+    setattr(obj, attr_name, row[col_pos])
+AttributeError: property 'product_count' of 'Category' object has no setter
+ERROR 2026-10-20 10:55:24,108 django.request Internal Server Error: /api/v1/categories
+Traceback (most recent call last):
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\rest_framework\serializers.py", line 727, in to_representation
+    return [
+           ^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 402, in __iter__
+    self._fetch_all()
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 1933, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guem\.config\freebuff-desktop\no-folder\threads\b3040de409282835f5a13a325ca0348a9bce133afe66690af07c7bfec093d913\.venv\Lib\site-packages\django\db\models\query.py", line 133, in __iter__
+    setattr(obj, attr_name, row[col_pos])
+AttributeError: property 'product_count' of 'Category' object has no setter
+[20/Oct/2026 10:55:24] "GET /api/v1/categories HTTP/1.1" 500 8206
+[20/Oct/2026 10:55:24] "GET /api/v1/settings HTTP/1.1" 200 609
