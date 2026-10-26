@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="konate_dark_background">#0D1B2A</color>
+    <color name="konate_primary">#2DC97E</color>
+    <color name="konate_on_primary">#FFFFFF</color>
+    <color name="konate_surface">#162435</color>
+    <color name="konate_on_surface">#FFFFFF</color>
+</resources>

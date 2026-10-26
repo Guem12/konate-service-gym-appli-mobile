@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+db.sqlite3
+media/
+staticfiles/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+pip-install.log
+.pgdata/
+pg.log
+initdb.log
+pip-install-2.log
+.DS_Store
+Thumbs.db
+
+# Flutter / Dart
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/.gradle/
+app/android/local.properties
+app/android/key.properties
+app/ios/Pods/
+app/ios/.symlinks/
+app/ios/Flutter/ephemeral/
+app/.run/
+# Logs de build locaux
+build-apk.log
+server.log
+*.iml
+.idea/
